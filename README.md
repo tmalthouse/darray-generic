@@ -56,4 +56,4 @@ darray_free_uint16_t();
 
 - Because of the function naming rules, only single-word types are allowed (i.e. `enum directions` or `long double` doesn't work.) To get around this, wrap any offending types in a `typedef` and use the aliased name.
 - Make sure only to call `darray_type_header` and `darray_type` only once per type, otherwise the compiler gets really unhappy.
-- This is still experimentala and full of bugs. Use at your own risk.
+- This is still experimentala and probably full of bugs. Use at your own risk.
