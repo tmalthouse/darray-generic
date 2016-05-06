@@ -13,6 +13,7 @@ Darray_##T *new_darray_##T (int initial_count);\
 int darray_expand_##T (Darray_##T *arr);\
 int darray_set_##T (Darray_##T *arr, T data, int index);\
 int darray_append_##T (Darray_##T *arr, T data);\
+T darray_get_##T (Darray_##T *arr, int index);\
 void free_darray_##T (Darray_##T *arr);
 
 
@@ -58,6 +59,9 @@ int darray_append_##T (Darray_##T *arr, T data) {\
     return 0;\
 }\
 \
+T get_darray_##T (Darray_##T *arr, int index) {\
+    return arr->data[index];\
+}\
 void free_darray_##T (Darray_##T *arr) {\
     free (arr->data);\
     free (arr);\
