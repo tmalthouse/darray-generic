@@ -42,7 +42,7 @@ int darray_set_##T (Darray_##T *arr, T data, int index) {\
         return -1;\
     }\
     arr->data[index] = data;\
-    return -1;\
+    return 0;\
 }\
 \
 int darray_append_##T (Darray_##T *arr, T data) {\
