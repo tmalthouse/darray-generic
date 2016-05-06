@@ -40,8 +40,8 @@ darray_type_header(uint16_t);//Creates function headers for a uint16_t Darray
 
 File `darray_types.c`
 ```
-\#include<darray.h>
-\#include"darray_types.h"
+#include<darray.h>
+#include"darray_types.h"
 
 darray_type(uint16_t);
 
@@ -51,3 +51,9 @@ darray_append_uint16_t(ptr, 30);
 
 darray_free_uint16_t();
 ```
+
+### Caveats:
+
+- Because of the function naming rules, only single-word types are allowed (i.e. `enum directions` or `long double` doesn't work.) To get around this, wrap any offending types in a `typedef` and use the aliased name.
+- Make sure only to call `darray_type_header` and `darray_type` only once per type, otherwise the compiler gets really unhappy.
+- This is still experimentala and full of bugs. Use at your own risk.
