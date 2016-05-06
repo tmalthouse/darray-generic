@@ -28,18 +28,18 @@ Move the `darray.h` file to wherever you keep your headers (the included `instal
 ###Example use:
 
 File `darray_types.h`
-`
-\#ifndef EXAMPLE_H
-\#define EXAMPLE_H
+```
+#ifndef EXAMPLE_H
+#define EXAMPLE_H
 
-\#include<darray.h>
+#include<darray.h>
 
 darray_type_header(uint16_t);//Creates function headers for a uint16_t Darray
-\#endif
-`
+#endif
+```
 
 File `darray_types.c`
-`
+```
 \#include<darray.h>
 \#include"darray_types.h"
 
@@ -50,4 +50,4 @@ Darray_uint16_t *ptr = new_darray_uint16_t(20);
 darray_append_uint16_t(ptr, 30);
 
 darray_free_uint16_t();
-`
+```
