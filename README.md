@@ -14,16 +14,16 @@ Move the `darray.h` file to wherever you keep your headers (the included `instal
 ### Functions:
 
 `Darray_TYPE *new_darray_TYPE (int initial_count)`
---Allocates and returns a pointer to a new darray that holds the specified type (Remember to define that type of array, as specified in step 3 above).
+- Allocates and returns a pointer to a new darray that holds the specified type (Remember to define that type of array, as specified in step 3 above).
 
 `int darray_set_TYPE (Darray_TYPE *arr, T data, int index)`
---Sets element `index` to the value of `data`. Returns 0 if the assignment is successful, and -1 if the index is out of bounds.
+- Sets element `index` to the value of `data`. Returns 0 if the assignment is successful, and -1 if the index is out of bounds.
 
 `int darray_append_TYPE (Darray_TYPE *arr, T data)`
---Adds `data` to the end of the array, expanding if neccessary. Returns -1 if expansion fails.
+- Adds `data` to the end of the array, expanding if neccessary. Returns -1 if expansion fails.
 
 `void free_darray_##T (Darray_##T *arr)`
---Frees the memory used by `arr`. It's important to use this function instead of calling `free(arr)` so that the internal buffer is freed as well.
+- Frees the memory used by `arr`. It's important to use this function instead of calling `free(arr)` so that the internal buffer is freed as well.
 
 ###Example use:
 
