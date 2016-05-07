@@ -33,6 +33,7 @@ int darray_expand_##T (Darray_##T *arr) {\
     void *temp = realloc (arr->data, arr->cap*2*sizeof(T));\
     if (temp != NULL) {\
         arr->data = temp;\
+        arr->cap*=2;\
         return 0;\
     }\
     return -1;\
